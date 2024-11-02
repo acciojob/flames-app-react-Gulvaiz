@@ -1,8 +1,8 @@
 import React, {Component, useState} from "react";
 import '../styles/App.css';
 
-class App extends Component {
-    render() {
+ const App = () => {
+     
 
         const [input1, setInput1] = useState("")
         const [input2, setInput2] = useState("") 
@@ -11,9 +11,11 @@ class App extends Component {
                         
 
         function handleCalculation() { 
-            if(input1 && input2)  {
+            if(input1.length > 0 && input2.length > 0)  {
               const uncommonAplhabets = [...input1].filter(char => ![...input2].includes(char)).concat([...input2].filter(char => ![...input1].includes(char)))
-        
+              
+ console.log(uncommonAplhabets)
+
               const length = uncommonAplhabets.length
 
               
@@ -46,7 +48,7 @@ class App extends Component {
             </div>
         )
     }
-}
+
 
 
 export default App;
