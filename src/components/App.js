@@ -39,7 +39,7 @@ class App extends Component {
             <div id="main">
                {/* Do not remove the main div */}
                <input type="text" value={input1} placeholder="enter first name" data-testid="input1" onChange={(e) => setInput1(e.target.value)} />
-               <input type="text" value={input2} placeholder="enter second name" data-testid="input2" onChange={(e) => setInput1(e.target.value)}/>
+               <input type="text" value={input2} placeholder="enter second name" data-testid="input2" onChange={(e) => setInput2(e.target.value)}/>
                <button data-testid="calculate_relationship" onClick={handleCalculation}>Calculate relationship</button>
                <button data-testid="clear" onClick={handleClear}>Clear</button>
                <h3 data-testid="answer">{output}</h3>
