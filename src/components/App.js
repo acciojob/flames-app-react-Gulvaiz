@@ -19,15 +19,16 @@ import '../styles/App.css';
               const length = uncommonAplhabets.length
 
               
-        if(length%6 === 0) setOutput("Siblings")
-            else if(length % 6 === 1) setOutput("Friends")
-             else if(length % 6 === 2) setOutput("Love")
-                 else if(length % 6 === 3) setOutput("Affection")
-                     else if(length % 6 === 4) setOutput("Marriage")
-                         else if(length % 6 === 5) setOutput("Enemy")
-            }
+              if (Math.floor(length % 6) === 0) setOutput("Siblings");
+              else if (Math.floor(length % 6) === 1) setOutput("Friends");
+              else if (Math.floor(length % 6) === 2) setOutput("Love");
+              else if (Math.floor(length % 6) === 3) setOutput("Affection");
+              else if (Math.floor(length % 6) === 4) setOutput("Marriage");
+              else if (Math.floor(length % 6) === 5) setOutput("Enemy");
+              
             else{
                 setOutput("Please Enter valid input")
+            }
             }
         } 
 
@@ -49,6 +50,6 @@ import '../styles/App.css';
         )
     }
 
-
+ 
 
 export default App;
